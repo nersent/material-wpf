@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="MaterialWPF.TabBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaterialWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="48" d:DesignWidth="300" SizeChanged="UserControl_SizeChanged">
+    <Grid x:Name="grid">
+
+        <Canvas x:FieldModifier="public" ClipToBounds="True" x:Name="canvas" Margin="0,0,0,1">
+
+            <Grid x:Name="Divider" Height="4" HorizontalAlignment="Left" Width="256"  VerticalAlignment="Bottom" Canvas.Top="44.6"/>
+        </Canvas>
+    </Grid>
+</UserControl>

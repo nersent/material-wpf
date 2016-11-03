@@ -1,0 +1,24 @@
+﻿<Window x:Class="MaterialWPF.TabWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MaterialWPF"
+        xmlns:materialWpf="clr-namespace:MaterialWPF;assembly=MaterialWPF"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="TabWindow" Height="300" Width="300" Closed="Window_Closed">
+    <Grid>
+        
+        <Grid Margin="0,40,0,0" x:Name="Container">
+            <materialWpf:TabLayout DropShadow="False" BackgroundColor="#009688" TabsBackground="#009688" LineColor="#E91E63" x:Name="TabLayout"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+        </Grid>
+        <Grid x:Name="TitleBar" Height="40" VerticalAlignment="top" HorizontalAlignment="Stretch" Background="#00796B">
+            <Label x:Name="actionTitle" Content="MaterialWPF" Foreground="#ffffff" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="/MaterialWPF;component/Fonts/Roboto/#Roboto" Margin="5,0,0,0" FontSize="16"></Label>
+            <Grid WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Right" Width="112" VerticalAlignment="Stretch">
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

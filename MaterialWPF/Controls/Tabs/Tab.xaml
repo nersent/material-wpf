@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="MaterialWPF.Tab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaterialWPF"
+             mc:Ignorable="d" 
+             Background="Transparent"
+             Cursor="Hand"
+             d:DesignHeight="48" d:DesignWidth="100"   MouseUp="UserControl_MouseUp" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave" PreviewMouseMove="UserControl_PreviewMouseMove">
+    <Grid ClipToBounds="True" MouseDown="Grid_MouseDown" x:Name="bg"  GotMouseCapture="bg_GotMouseCapture">
+        <TextBlock x:FieldModifier="public" x:Name="Title" Typography.Capitals="AllSmallCaps" Text="Label" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White" FontSize="18" FontFamily="/MaterialWPF;component/Fonts/Roboto/#Roboto" Loaded="Title_Loaded" Opacity="0.7"/>
+        <Ellipse x:Name="Ripple" Width="0" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top" Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}"/>
+    </Grid>
+</UserControl>

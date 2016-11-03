@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="MaterialWPF.raisedButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaterialWPF"
+             mc:Ignorable="d" 
+             MouseDown="background_MouseDown"
+             Cursor="Hand"
+             Background="Transparent"
+             d:DesignWidth="72"
+             d:DesignHeight="38" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave">
+
+    <Grid >
+
+        <local:ClippingBorder ClipToBounds="True" x:Name="background" CornerRadius="3" Background="#dddddd" >
+            
+            <Grid>
+                
+                <Ellipse x:Name="Ripple" Width="0" Fill="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}">
+
+                </Ellipse>
+            </Grid>
+            </local:ClippingBorder>
+
+        <TextBlock x:Name="TextBlock" Typography.Capitals="AllSmallCaps" FontSize="16" Text="Text" Margin="0,0,0,1" Foreground="#444" FontFamily="/MaterialWPF;component/Fonts/Roboto/#Roboto" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        
+    </Grid>
+</UserControl>

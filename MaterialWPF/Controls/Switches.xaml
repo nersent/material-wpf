@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="MaterialWPF.Switches"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaterialWPF"
+             mc:Ignorable="d" 
+             Cursor="Hand"
+             Background="Transparent"
+             d:DesignHeight="64" d:DesignWidth="125" MouseDown="UserControl_MouseDown">
+    <Grid Height="38" Width="56" ClipToBounds="true">
+        <Ellipse x:Name="Ripple" Fill="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Height="0" Width="0" Margin="0,0,16,0"/>
+        <Border x:Name="bg" CornerRadius="7" Height="12" Width="30" Background="#818181" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+        <Ellipse x:Name="swichElipse" Fill="#fafafa" HorizontalAlignment="Center" Height="20" Width="20" VerticalAlignment="Center"  Margin="0,0,17,0">
+            <Ellipse.Effect>
+                <DropShadowEffect BlurRadius="5" Opacity="0.25" ShadowDepth="1"/>
+            </Ellipse.Effect>
+        </Ellipse>
+
+    </Grid>
+</UserControl>

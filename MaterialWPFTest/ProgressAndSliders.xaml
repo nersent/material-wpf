@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="MaterialWPFTest.ProgressAndSliders"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MaterialWPFTest"
+             xmlns:materialWpf="clr-namespace:MaterialWPF;assembly=MaterialWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="812" d:DesignWidth="300">
+    <Grid Background="#f5f5f5">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <materialWpf:linearDeterminate BackgroundColor="#F8BBD0" ProgressColor="#E91E63" x:Name="progressbar" Margin="16,40,16,0" HorizontalAlignment="Stretch" Height="5" VerticalAlignment="Top"/>
+                <materialWpf:raisedButton RippleColor="White" FontColor="White" Text="Increase" BackgroundColor="#E91E63" HorizontalAlignment="Right" Margin="0,56,16,0" VerticalAlignment="Top" Width="105" Height="32" MouseDown="raisedButton_MouseDown"/>
+                <materialWpf:linearIndeterminate BackgroundColor="#F8BBD0" ProgressColor="#E91E63" HorizontalAlignment="Stretch" Margin="16,134,16,0" VerticalAlignment="Top" Height="5" />
+                <materialWpf:Slider AccentColor="#E91E63" ValueLabelEnabled="True"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="0,180,0,0"/>
+                <materialWpf:Slider AccentColor="#E91E63" ValueLabelEnabled="False"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="0,243,0,0"/>
+                <TextBlock FontSize="16" Foreground="#444" FontFamily="/MaterialWPF;component/Fonts/Roboto/#Roboto" HorizontalAlignment="Left" Margin="16,16,0,0" TextWrapping="Wrap" Text="LinearDeterminate" VerticalAlignment="Top"/>
+                <TextBlock FontSize="16" Foreground="#444" FontFamily="/MaterialWPF;component/Fonts/Roboto/#Roboto" HorizontalAlignment="Left" Margin="16,107,0,0" TextWrapping="Wrap" Text="LinearIndeterminate" VerticalAlignment="Top"/>
+                <TextBlock FontSize="16" Foreground="#444" FontFamily="/MaterialWPF;component/Fonts/Roboto/#Roboto" HorizontalAlignment="Left" Margin="16,159,0,0" TextWrapping="Wrap" Text="Slider with ValueLabel" VerticalAlignment="Top"/>
+                <TextBlock FontSize="16" Foreground="#444" FontFamily="/MaterialWPF;component/Fonts/Roboto/#Roboto" HorizontalAlignment="Left" Margin="16,249,0,0" TextWrapping="Wrap" Text="Slider without ValueLabel" VerticalAlignment="Top"/>
+               
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
