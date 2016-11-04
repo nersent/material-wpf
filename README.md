@@ -1,2 +1,2 @@
 # MaterialWPF
-A Material Design FrameWork for wpf
+A Material Design framework for wpf
