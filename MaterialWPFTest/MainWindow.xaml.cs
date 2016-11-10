@@ -73,10 +73,7 @@ namespace MaterialWPF
                 this.WindowState = WindowState.Minimized;
             };
 
-            ToolBarx.ActionButtonsGridMargin = new Thickness(8, 0, 0, 0);
-            ToolBarx.addActionButton(item_close);
-            ToolBarx.addActionButton(item_maximize);
-            ToolBarx.addActionButton(item_minimize);
+           
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)

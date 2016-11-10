@@ -8,8 +8,8 @@
              d:DesignHeight="48" d:DesignWidth="300" SizeChanged="UserControl_SizeChanged">
     
     <Grid x:Name="grid">
-        <ScrollViewer x:Name="scroll" VerticalScrollBarVisibility="Disabled"  HorizontalScrollBarVisibility="Hidden" PreviewMouseWheel="scroll_PreviewMouseWheel">
-            <Canvas x:FieldModifier="public" ClipToBounds="True" x:Name="canvas" Margin="0,0,0,1"  Height="48">
+        <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Stretch"  x:Name="scroll" VerticalScrollBarVisibility="Disabled"  HorizontalScrollBarVisibility="Hidden" PreviewMouseWheel="scroll_PreviewMouseWheel">
+            <Canvas HorizontalAlignment="Stretch" VerticalAlignment="Top" x:FieldModifier="public" ClipToBounds="True" x:Name="canvas" Margin="0,0,0,1"  Height="48">
                 <Grid x:Name="Divider" Height="4" HorizontalAlignment="Left" Width="256"  VerticalAlignment="Bottom" Canvas.Top="44.6"/>
             </Canvas>
         </ScrollViewer>

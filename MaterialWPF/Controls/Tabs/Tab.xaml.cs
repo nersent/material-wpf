@@ -202,7 +202,7 @@ namespace MaterialWPF
                 Vector offset = Point.Subtract(e.GetPosition(parent), _mStart);
                 Point mousePoint = new Point(_mStartOffset.X + offset.X, _mStartOffset.Y + offset.Y);
                 Tab overTab = null;
-                overTab = parent.GetTabFromMousePoint(this);
+                overTab = parent.GetTabFromMousePoint(this, mousePoint.X + this.ActualWidth / 2);
                 if (overTab != null)
                 {
                     try

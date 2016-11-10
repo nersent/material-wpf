@@ -42,7 +42,7 @@ namespace MaterialWPF
             {
                 Divider.BeginAnimation(Canvas.LeftProperty,
                     new DoubleAnimation(Canvas.GetLeft(Divider), Canvas.GetLeft(ActualSelect),
-                    TimeSpan.FromMilliseconds(0)));
+                    TimeSpan.FromMilliseconds(1)));
                 Animations.AnimateWidth(Divider.ActualWidth, ActualSelect.ActualWidth, Divider, 0, 0, null);
             }
         }
@@ -149,7 +149,7 @@ namespace MaterialWPF
             }
         }
 
-        public Tab GetTabFromMousePoint(Tab callingTab)
+        public Tab GetTabFromMousePoint(Tab callingTab, double x)
         {
             Tab theTab = null;
             if (!_tabDragLocked)
@@ -161,7 +161,7 @@ namespace MaterialWPF
                         Location = new Point(Canvas.GetLeft(ctrl), Canvas.GetTop(ctrl)),
                         Size = new Size(ctrl.ActualWidth, ctrl.ActualHeight)
                     };
-                    if (myRectangle.Contains(Mouse.GetPosition(this)) & ctrl.Equals(callingTab) == false)
+                    if (myRectangle.Contains(new Point(x, 5)) & ctrl.Equals(callingTab) == false)
                     {
                         theTab = ctrl;
                     }
@@ -187,8 +187,6 @@ namespace MaterialWPF
             tab.bg.Background = new SolidColorBrush(TabsBackground);
             Canvas.SetTop(tab, 0);
             Panel.SetZIndex(Divider, int.MaxValue);
-
-
         }
 
         private Tab _oldSelection;

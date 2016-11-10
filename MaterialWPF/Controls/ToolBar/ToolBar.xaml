@@ -7,19 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="48" d:DesignWidth="500">
     <Grid x:Name="MainGrid" Background="#3498db">
-        <Grid x:Name="navIcon" WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" ClipToBounds="True" Height="36" Width="36" Margin="16,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" PreviewMouseLeftButtonDown="navIcon_PreviewMouseLeftButtonDown">
-            <Image x:Name="navIconImage" Height="24" Width="24" Source="pack://application:,,,/MaterialWPF;component/Icons/ToolBar/NavIcons/nav_white.png" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            <Ellipse x:Name="navIconRipple" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Center" Width="0" Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}" />
-        </Grid>
-        <Grid x:Name="titleGrid" Height="32" ClipToBounds="True" MinWidth="64" Margin="60,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Label x:Name="title" Content="Title" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#ffffff"></Label>
-        </Grid>
-        <Grid x:Name="menuIcon" WindowChrome.IsHitTestVisibleInChrome="True" Cursor="Hand" ClipToBounds="True" Height="36" Width="36" Margin="0,0,16,0" HorizontalAlignment="Right" VerticalAlignment="Center" PreviewMouseLeftButtonDown="menuIcon_PreviewMouseLeftButtonDown">
-            <Image x:Name="menuIconImage" Height="24" Width="24" Source="pack://application:,,,/MaterialWPF;component/Icons/ToolBar/MenuIcons/more_vert_white.png" HorizontalAlignment="Center" VerticalAlignment="Center" />
-            <Ellipse x:Name="menuIconRipple" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Center" Width="0" Height="{Binding Path=Width, RelativeSource={RelativeSource Self}}" />
-        </Grid>
-        <Grid x:Name="actionButtons" WindowChrome.IsHitTestVisibleInChrome="True" ClipToBounds="True" Height="32" MinWidth="32" Margin="0,0,64,0" HorizontalAlignment="Right" VerticalAlignment="Center">
-            
-        </Grid>
+        
     </Grid>
 </UserControl>

@@ -16,8 +16,8 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="Main">
-        <materialWpf:TabLayout TabDrag="Enabled" x:Name="tabLayout" Margin="0,48,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <materialWpf:ToolBar x:Name="ToolBarx" Title="MaterialWPF" BackgroundColor="#3f51b5" Width="Auto" Height="48" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0"></materialWpf:ToolBar>
+        <materialWpf:TabLayout TabSize="300" TabDrag="Enabled" x:Name="tabLayout" Margin="0,48,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <materialWpf:ToolBar x:Name="ToolBarx" Width="Auto" Height="48" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0"></materialWpf:ToolBar>
     </Grid>
 
 </Window>
