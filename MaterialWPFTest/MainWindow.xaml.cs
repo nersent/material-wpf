@@ -84,7 +84,6 @@ namespace MaterialWPF
             tabLayout.tabBar.AddTab("Selection Controls", new SelectionControlsTab());
             tabLayout.tabBar.AddTab("Buttons", new ButtonsTab());
             tabLayout.tabBar.AddTab("Progress and sliders", new ProgressAndSliders());
-            tabLayout.tabBar.AddTab("Circular Progress", new CircularProgress());
             tabLayout.tabBar.AddTab("Fonts and Inputs", new FontsAndInputs());
             tabLayout.tabBar.AddTab("Scroll Viewer", new CustomScrollViewer());
 

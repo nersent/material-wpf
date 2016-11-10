@@ -28,7 +28,7 @@ namespace MaterialWPFTest
 
         private void CustomScrollViewer_Loaded(object sender, RoutedEventArgs e)
         {
-            contextmenu.addItem(new MaterialWPF.MaterialContextMenuItem("XDD"));
+
         }
     }
 }

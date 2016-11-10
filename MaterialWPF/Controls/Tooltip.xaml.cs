@@ -52,7 +52,9 @@ namespace MaterialWPF
         public void Hide()
         {
             Animations.AnimateFade(0.8, 0, grid, 0.2, 0, null);
-            Animations.AnimateMargin(new Thickness(Margin.Left, marginTop, Margin.Right, Margin.Bottom), new Thickness(Margin.Left, marginTop - 10, Margin.Right, Margin.Bottom), this, 0.2, 0, null);
+            Animations.AnimateMargin(new Thickness(Margin.Left, marginTop, Margin.Right, Margin.Bottom), new Thickness(Margin.Left, marginTop - 10, Margin.Right, Margin.Bottom), this, 0.2, 0, () => {
+                Visibility = Visibility.Hidden;
+            });
         }
     }
 }

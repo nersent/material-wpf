@@ -61,9 +61,6 @@
     <Compile Include="ButtonsTab.xaml.cs">
       <DependentUpon>ButtonsTab.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CircularProgress.xaml.cs">
-      <DependentUpon>CircularProgress.xaml</DependentUpon>
-    </Compile>
     <Compile Include="CustomScrollViewer.xaml.cs">
       <DependentUpon>CustomScrollViewer.xaml</DependentUpon>
     </Compile>
@@ -82,10 +79,6 @@
     <Page Include="ButtonsTab.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="CircularProgress.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomScrollViewer.xaml">
       <Generator>MSBuild:Compile</Generator>
