@@ -22,7 +22,7 @@
 
             </Grid>
         </Border>
-        <Border Width="140" CornerRadius="2"  Height="104" Background="White" Margin="30,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" >
+        <Border Width="160" CornerRadius="2"  Height="104" Background="White" Margin="30,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" >
             <Border.Effect>
                 <DropShadowEffect Opacity="0.2" ShadowDepth="2" Direction="-90"/>
             </Border.Effect>

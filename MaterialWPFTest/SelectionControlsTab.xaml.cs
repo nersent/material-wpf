@@ -13,5 +13,10 @@ namespace MaterialWPF
             InitializeComponent();
           
         }
+
+        private void CheckBox_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }

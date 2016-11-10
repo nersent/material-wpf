@@ -46,9 +46,20 @@ namespace MaterialWPF
                 Animations.AnimateWidth(Divider.ActualWidth, ActualSelect.ActualWidth, Divider, 0, 0, null);
             }
         }
+        private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+           
 
+        }
         public void CalcSizes(bool animation)
         {
+            double a = 0;
+            foreach (Tab t in TabCollection)
+            {
+                a += t.ActualWidth;
+            }
+            canvas.Width = a;
+
             if (!double.IsNaN(this.FindParent<TabLayout>().TabSize))
             {
                 double tabWidth = 0;
@@ -67,8 +78,9 @@ namespace MaterialWPF
                         Divider.Width = tab.MaxWidth;
                         tabWidth = tab.MaxWidth;
                     }
+                   
                 }
-
+               
                 foreach (Tab t in TabCollection)
                 {
                     _tabDragLocked = true;
@@ -239,6 +251,32 @@ namespace MaterialWPF
         private void UserControl_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             CalcSizes(false);
+        }
+
+        private void scroll_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if (e.Delta < 0) // wheel down
+            {
+                if (scroll.HorizontalOffset + e.Delta > 0)
+                {
+                    scroll.ScrollToHorizontalOffset(scroll.HorizontalOffset + e.Delta);
+                }
+                else
+                {
+                    scroll.ScrollToLeftEnd();
+                }
+            }
+            else //wheel up
+            {
+                if (scroll.ExtentWidth > scroll.HorizontalOffset + e.Delta)
+                {
+                    scroll.ScrollToHorizontalOffset(scroll.HorizontalOffset + e.Delta);
+                }
+                else
+                {
+                    scroll.ScrollToRightEnd();
+                }
+            }
         }
     }
 }
