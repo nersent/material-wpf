@@ -94,7 +94,13 @@ namespace MaterialWPF.Helpers
                 From = fromPosition,
                 To = toPosition,
                 Duration = TimeSpan.FromSeconds(duration)
+
             };
+            var ease = new PowerEase()
+            {
+                EasingMode = EasingMode.EaseOut
+            };
+            thicknessAnimation.EasingFunction = ease;
             Storyboard.SetTarget(thicknessAnimation, control);
             Storyboard.SetTargetProperty(thicknessAnimation, new PropertyPath(FrameworkElement.MarginProperty));
 
@@ -104,6 +110,7 @@ namespace MaterialWPF.Helpers
                 To = to,
                 Duration = TimeSpan.FromSeconds(duration)
             };
+            widthAnimation.EasingFunction = ease;
             Storyboard.SetTarget(widthAnimation, control);
             Storyboard.SetTargetProperty(widthAnimation, new PropertyPath(FrameworkElement.WidthProperty));
 
@@ -113,6 +120,7 @@ namespace MaterialWPF.Helpers
                 To = to,
                 Duration = TimeSpan.FromSeconds(duration)
             };
+            heightAnimation.EasingFunction = ease;
             Storyboard.SetTarget(heightAnimation, control);
             Storyboard.SetTargetProperty(heightAnimation, new PropertyPath(FrameworkElement.HeightProperty));
 

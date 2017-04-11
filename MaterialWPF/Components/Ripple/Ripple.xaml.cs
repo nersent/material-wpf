@@ -62,7 +62,7 @@ namespace MaterialWPF.Components.Ripple
 
             RippleColor = Colors.White;
             RippleOpacity = 0.3;
-            RippleDuration = 0.3;
+            RippleDuration = 0.7;
             FadeOutDuration = 0.4;
         }
 
@@ -75,7 +75,7 @@ namespace MaterialWPF.Components.Ripple
             Ellipse ripple = new Ellipse();
             var mousePosition = Mouse.GetPosition(this);
             var startMargin = new Thickness(mousePosition.X, mousePosition.Y, 0, 0);
-            var endWidth = Math.Max(ActualWidth, ActualHeight) * 2.2;
+            var endWidth = Math.Max(ActualWidth, ActualHeight) * 2.33;
 
             ripple.Width = 0;
             ripple.Height = 0;
