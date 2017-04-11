@@ -9,7 +9,6 @@
 //------------------------------------------------------------------------------
 
 namespace MaterialWPF.Properties {
-    using System;
     
     
     /// <summary>
@@ -38,7 +37,7 @@ namespace MaterialWPF.Properties {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+                if ((resourceMan == null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MaterialWPF.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
@@ -57,16 +56,6 @@ namespace MaterialWPF.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon logo {
-            get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
             }
         }
     }

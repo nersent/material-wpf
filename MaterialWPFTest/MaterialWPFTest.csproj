@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B87364B-1811-44CC-B1FA-E62A3253966E}</ProjectGuid>
+    <ProjectGuid>{6B2F48C7-E3A2-4921-A5C6-F91CA41B63D4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MaterialWPFTest</RootNamespace>
     <AssemblyName>MaterialWPFTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -35,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MaterialWPF">
-      <HintPath>..\MaterialWPF\bin\Debug\MaterialWPF.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -58,36 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ButtonsTab.xaml.cs">
-      <DependentUpon>ButtonsTab.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomScrollViewer.xaml.cs">
-      <DependentUpon>CustomScrollViewer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FontsAndInputs.xaml.cs">
-      <DependentUpon>FontsAndInputs.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ProgressAndSliders.xaml.cs">
-      <DependentUpon>ProgressAndSliders.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SelectionControlsTab.xaml.cs">
-      <DependentUpon>SelectionControlsTab.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TabWindow.xaml.cs">
-      <DependentUpon>TabWindow.xaml</DependentUpon>
-    </Compile>
-    <Page Include="ButtonsTab.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="CustomScrollViewer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="FontsAndInputs.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,18 +66,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ProgressAndSliders.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SelectionControlsTab.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TabWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -135,25 +89,15 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="add_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\close.png" />
-    <Resource Include="Icons\maximaze.png" />
-    <Resource Include="Icons\minimaze.png" />
+    <ProjectReference Include="..\MaterialWPF\MaterialWPF.csproj">
+      <Project>{65129011-C3C5-4920-B414-F33B0EBF8E7D}</Project>
+      <Name>MaterialWPF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

@@ -1,23 +1,15 @@
-﻿<Window x:Class="MaterialWPF.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MaterialWPF"
-        xmlns:materialWpf="clr-namespace:MaterialWPF;assembly=MaterialWPF"
+        xmlns:local="clr-namespace:MaterialWPFTest"
+        xmlns:Ripple="clr-namespace:MaterialWPF.Components.Ripple;assembly=MaterialWPF" x:Class="MaterialWPFTest.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1024"
-        Background="#F5F5F5"
-        WindowStyle="None"
-        >
-    <Window.Resources>
-        <Style TargetType="ContextMenu">
-            
-        </Style>
-    </Window.Resources>
-    <Grid x:Name="Main">
-        <materialWpf:TabLayout TabSize="300" TabDrag="Enabled" x:Name="tabLayout" Margin="0,48,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <materialWpf:ToolBar x:Name="ToolBarx" Width="Auto" Height="48" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,0,0,0"></materialWpf:ToolBar>
-    </Grid>
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="Black">
 
+        <Ripple:Ripple Background="Black" x:Name="Ripple" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDown="Ripple_MouseDown" MouseUp="Ripple_MouseUp" />
+
+    </Grid>
 </Window>
