@@ -81,6 +81,7 @@ namespace MaterialWPF.Components.Ripple
             ripple.Height = 0;
             ripple.VerticalAlignment = VerticalAlignment.Top;
             ripple.HorizontalAlignment = HorizontalAlignment.Left;
+            ripple.IsHitTestVisible = false;
 
             ripple.Fill = new SolidColorBrush(RippleColor);
             ripple.Opacity = RippleOpacity;

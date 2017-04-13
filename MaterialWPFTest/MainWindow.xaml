@@ -7,9 +7,15 @@
         xmlns:Ripple="clr-namespace:MaterialWPF.Components.Ripple;assembly=MaterialWPF" x:Class="MaterialWPFTest.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid Background="Black">
-
-        <Ripple:Ripple Background="Black" x:Name="Ripple" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDown="Ripple_MouseDown" MouseUp="Ripple_MouseUp" />
+    <Grid MouseUp="Ripple_MouseUp" Background="Black">
+        
+        <StackPanel Background="White" MouseDown="Ripple_MouseDown" ></StackPanel>
+        <Ripple:Ripple RippleColor="Blue" x:Name="Ripple" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Popup StaysOpen="False" Width="300" Height="200" x:Name="MyPopup">
+            <Popup.Child>
+                <StackPanel Background="Bisque"></StackPanel>
+            </Popup.Child>
+        </Popup>
 
     </Grid>
 </Window>

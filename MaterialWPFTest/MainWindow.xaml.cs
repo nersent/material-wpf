@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -27,12 +28,23 @@ namespace MaterialWPFTest
 
         private void Ripple_MouseDown(object sender, MouseButtonEventArgs e)
         {
+
             Ripple.CreateRipple();
         }
 
         private void Ripple_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            MyPopup.PlacementTarget = sender as UIElement;
+            MyPopup.Placement = PlacementMode.Bottom;
+            MyPopup.AllowsTransparency = true;
+            MyPopup.PopupAnimation = PopupAnimation.Slide;
+            MyPopup.IsOpen = true;
             Ripple.RemoveRipple();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
